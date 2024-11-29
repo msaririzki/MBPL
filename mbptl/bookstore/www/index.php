@@ -8,8 +8,8 @@
 
 <div class="container mt-4">
   <h2>List of Books</h2>
-  <table class="table">
-    <thead>
+  <table class="table table-striped table-hover">
+    <thead class="thead-dark">
       <tr>
         <th>ID</th>
         <th>Title</th>
@@ -40,6 +40,11 @@
       ?>
     </tbody>
   </table>
+  <style>
+    .table-hover tbody tr:hover {
+      background-color: #f1f1f1; /* Warna latar belakang saat hover */
+    }
+  </style>
 </div>
 
 <?php require_once 'inc/footer.php'; ?>
