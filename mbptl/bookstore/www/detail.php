@@ -18,7 +18,6 @@
           <p class="card-text">Author: <?php echo $row["author"]; ?></p>
           <p class="card-text">Description: <?php echo $row["description"]; ?></p>
           <p class="card-text">ID: <?php echo $row["id"]; ?></p>
-          <a href="index.php" class="btn btn-success">Go to Books</a>
         </div>
       </div>
     </div>
@@ -36,11 +35,12 @@
                 echo "Book not found.";
             }
 
-            $result->free();
+            if ($result) {
+                $result->free();
+            }
         }
 
         $conn->close();
-
       ?>
     </div>
   </div>
